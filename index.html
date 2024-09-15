@@ -43,39 +43,33 @@
     <!-- ========================= HEADER here ========================= -->
     <header>
       <!-- =========================  NAVBAR (MENU) ========================= -->
-      <nav class="menu-bar">
-        <div class="slogan">Your Slogan Here</div>
-        <button
-          class="hamburger"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="menu">
-          <li class="submenu-toggle"><a href="#home">Inicio</a></li>
-          <li class="has-submenu">
-            <a href="#services">Servicios</a>
-            <ul class="submenu">
-              <li class="has-submenu">
-                <a href="#moorings">Amarres</a>
-                <ul class="submenu">
-                  <li><a href="#love-moorings">Amarres de Amor near me</a></li>
-                  <li>
-                    <a href="#spiritual-moorings">Amarres para Homosexuales</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="#domains">Dominios</a></li>
-              <li><a href="#distances">Ritos de alejamiento</a></li>
+      <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">Brujos de Catemaco</div>
+            <button class="navbar-toggle" id="navbar-toggle">☰</button>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item"><a href="#" class="navbar-link">Inicio</a></li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">Servicios</a>
+                    <div class="dropdown-content">
+                        <a href="#">Servicio 1</a>
+                        <a href="#">Servicio 2</a>
+                        <div class="nested-dropdown">
+                            <a href="#">Servicio 3</a>
+                            <div class="nested-dropdown-content">
+                                <a href="#">Subservicio 1</a>
+                                <a href="#">Subservicio 2</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar-item"><a href="#" class="navbar-link">Testimonios</a></li>
+                <li class="navbar-item"><a href="#" class="navbar-link">Contactos</a></li>
             </ul>
-          </li>
-          <li><a href="#testimonios">Testimonios</a></li>
-          <li><a href="#contacto">Contactanos</a></li>
-        </ul>
-      </nav>
+        </div>
+    </nav>
+    </header>
+
       <!-- =========================  BANNER ========================= -->
       <div class="container-banner">
         <h1>BRUJOS DE CATEMACO EXPERTOS EN AMARRES DE AMOR Y BRUJERÍA</h1>
@@ -111,8 +105,6 @@
           </div>
         </div>
       </div>
-    </header>
-
     <!-- ========================= SECTION here ========================= -->
     <section class="we-do-section pt-100">
       <div class="container-section">
