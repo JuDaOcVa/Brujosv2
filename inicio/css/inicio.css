@@ -1,0 +1,956 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+/* ========================= Background ========================= */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #000000, #2e0105f0);
+  z-index: -1;
+}
+
+.mist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwLjEgMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWx0ZXI9InVybCgjYSkiLz48L3N2Zz4=");
+  opacity: 0.3;
+  animation: mistAnimation 60s linear infinite;
+}
+
+@keyframes mistAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.symbol {
+  position: absolute;
+  font-size: 24px;
+  color: rgba(255, 0, 0, 0.6);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ========================= Banner ========================= */
+
+.container-banner {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.division-banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-banner h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(229, 241, 8, 0.84);
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container-banner {
+    margin-top: 10%;
+  }
+
+  .container-banner h1 {
+    font-size: 2rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .container-banner {
+    margin-top: 15%;
+  }
+
+  .container-banner h1 {
+    font-size: 1.5rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+  }
+}
+/* ========================= Logo Banner ========================= */
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  font-size: 2rem;
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+}
+
+.container-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container-img {
+    width: 80%; /* Ajusta el ancho al 80% del contenedor en pantallas más pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .container-img {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas muy pequeñas */
+  }
+}
+/* ========================= Texto Banner ========================= */
+
+.banner-text1,
+.banner-text2 {
+  color: white;
+  text-align: center;
+}
+
+.banner-text1 {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.banner-text2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2%;
+}
+
+.container-text {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-left: 0.5%;
+}
+
+.banner-subtitle {
+  font-size: 2rem;
+  color: #d4af37;
+  text-align: center;
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #d4af37;
+  text-shadow: 2px 2px 4px rgba(229, 241, 8, 0.84);
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.banner-text2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.item-opcion {
+  color: white !important;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .banner-text1 {
+    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+
+  .banner-text2 {
+    font-size: 1.2rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+
+  .container-text {
+    width: 80%; /* Ajusta el ancho al 80% del contenedor en pantallas más pequeñas */
+  }
+
+  .banner-subtitle {
+    font-size: 1.5rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+
+  .highlight {
+    font-size: 1.2em; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .banner-text1 {
+    font-size: 0.8rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+  }
+
+  .banner-text2 {
+    font-size: 1rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+  }
+
+  .container-text {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas muy pequeñas */
+  }
+
+  .banner-subtitle {
+    font-size: 1.2rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+  }
+
+  .highlight {
+    font-size: 1em; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+  }
+}
+
+/* ========================= Boton Banner ========================= */
+
+.spell-book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  
+}
+
+.spell-book {
+  margin-left: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 70%;
+  height: 50px;
+  background: linear-gradient(45deg, #4a0e4e, #81236b);
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(129, 35, 107, 0.5);
+}
+
+.spell-book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 30px rgba(129, 35, 107, 0.8);
+}
+
+.spell-book::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    transparent 20%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 80%
+  );
+  animation: sparkle 4s linear infinite;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.spell-book-text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.magical-aura {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent,
+    rgba(255, 255, 255, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.spell-book:hover .magical-aura {
+  opacity: 1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.runes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+.rune {
+  position: absolute;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .spell-book {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas más pequeñas */
+    height: 45px; /* Ajusta la altura en pantallas más pequeñas */
+  }
+
+  .spell-book-text {
+    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+    line-height: 45px; /* Ajusta la altura de línea en pantallas más pequeñas */
+  }
+}
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .spell-book {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor en pantallas muy pequeñas */
+    height: 40px; /* Ajusta la altura en pantallas muy pequeñas */
+  }
+  .spell-book-text {
+    font-size: 0.5rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    line-height: 40px; /* Ajusta la altura de línea en pantallas muy pequeñas */
+  }
+}
+
+/* ========================= Seccion brujos ========================= */
+
+.container-section {
+  margin-top: 3%;
+}
+
+.container-information {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-top: 4%;
+}
+
+.text-container h2,
+p {
+  color: white;
+  text-align: center;
+}
+
+.text-container h2 {
+  text-shadow: 2px 2px 4px rgba(241, 66, 8, 0.84);
+}
+
+.text-container p {
+  font-size: 1.2rem;
+  margin: 3%;
+  text-align: justify;
+}
+
+.text-container hr {
+  width: 60%;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #ec2a08;
+  border: 1px solid tomato;
+  transition: border-color 0.5s ease;
+  cursor: pointer;
+}
+
+.text-container hr:hover {
+  width: 60%;
+  height: 4px;
+  margin: 0 auto;
+  background-color: brown;
+}
+
+.pareja {
+  margin-top: 5%;
+  max-width: 300px;
+  max-width: 300px;
+  position: relative;
+  border-radius: 10%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.784);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pareja:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.784); /* Agrega una sombra más pronunciada */
+}
+
+.brujos {
+  margin-bottom: 10%;
+  margin-left: 3%;
+  width: 500px;
+  height: 400px;
+  position: relative;
+  border-radius: 10%;
+  box-shadow: 0 0 20px rgba(129, 35, 107, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brujos:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 0 20px rgba(129, 35, 107, 0.5); /* Agrega una sombra más pronunciada */
+}
+
+.text-info {
+  position: relative;
+  margin: 10px 60px;
+  width: 35%;
+}
+
+.text-info p {
+  color: whitesmoke;
+  font-size: 1.2rem;
+  text-align: justify;
+  margin-bottom: 10%;
+}
+
+.text-witch {
+  color: white;
+  text-align: center;
+  text-shadow: 3px 5px 5px rgba(175, 11, 220, 0.685);
+}
+
+.container-witchcraft {
+  margin-top: 5%;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container-information {
+    flex-direction: column; /* Cambia la dirección del flex a columna para pantallas más pequeñas */
+    text-align: center;
+  }
+
+  .text-container p {
+    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+    margin: 2%;
+  }
+
+  .text-container hr {
+    width: 80%; /* Ajusta el ancho del hr en pantallas más pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .text-container p {
+    font-size: 0.875rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    margin: 1%;
+  }
+
+  .text-container hr {
+    width: 90%; /* Ajusta el ancho del hr en pantallas muy pequeñas */
+  }
+}
+/* ========================= testimonios brujos ========================= */
+
+.container-testimonios {
+  margin-top: 4%;
+}
+
+.container-testimonios h1,
+p {
+  color: white;
+  text-align: center;
+}
+
+.container-testimonios h1 {
+  text-shadow: 2px 2px 4px rgba(241, 66, 8, 0.84);
+}
+
+.container-testimonios p {
+  font-size: 1.2rem;
+  margin: 3%;
+  text-align: justify;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container-information {
+    flex-direction: column; /* Cambia la dirección del flex a columna para pantallas más pequeñas */
+    text-align: center;
+  }
+
+  .text-container p {
+    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+    margin: 2%;
+  }
+
+  .text-container hr {
+    width: 80%; /* Ajusta el ancho del hr en pantallas más pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .text-container p {
+    font-size: 0.875rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    margin: 1%;
+  }
+
+  .text-container hr {
+    width: 90%; /* Ajusta el ancho del hr en pantallas muy pequeñas */
+  }
+}
+/* ========================= carousel ========================= */
+
+.carousel-video-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ajusta según tus necesidades */
+}
+
+.carousel-container {
+  margin-left: 10%;
+  margin-top: 5%;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  perspective: 1000px;
+
+}
+
+.carousel img {
+  margin-top: 10%;
+}
+
+.carousel p {
+  padding: 10px 40px;
+  color: white;
+  font-size: 10px;
+}
+
+.item {
+  position: absolute;
+  width: 280px;
+  height: 380px;
+  background-color: #16213e;
+  border: 2px solid #e94560;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  backface-visibility: hidden;
+  box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.buttom-nav {
+  width: 100%;
+  text-align: center;
+}
+
+.buttom-nav button {
+  background-color: #a30000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.buttom-nav button:hover {
+  background-color: #c73e54;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas más pequeñas */
+    max-width: 250px; /* Ajusta el ancho máximo en pantallas más pequeñas */
+  }
+
+  .carousel p {
+    padding: 10px 15px; /* Reduce el padding en pantallas más pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor en pantallas muy pequeñas */
+    max-width: 200px; /* Ajusta el ancho máximo en pantallas muy pequeñas */
+  }
+
+  .carousel p {
+    padding: 10px 10px; /* Reduce aún más el padding en pantallas muy pequeñas */
+  }
+}
+
+/* ========================= Video ========================= */
+
+.video-testimonio {
+  margin: 0 15px; /* Ajusta según tus necesidades */
+  width: 300px; /* Ajusta según tus necesidades */
+  height: auto;
+  object-fit: cover;
+  position: relative; /* Cambia de fixed a relative */
+  margin-right: 27%;
+}
+
+.video-testimonio video {
+  width: 600px;
+  height: auto;
+  border: 2px solid #ccc; /* Opcional: agrega un borde al video */
+  border-radius: 5px; /* Opcional: agrega bordes redondeados */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .video-testimonio {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas más pequeñas */
+  }
+
+  .video-testimonio video {
+    width: 100%; /* Asegura que el video ocupe el 100% del contenedor */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .video-testimonio {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor en pantallas muy pequeñas */
+  }
+
+  .video-testimonio video {
+    width: 100%; /* Asegura que el video ocupe el 100% del contenedor */
+  }
+}
+/* ========================= Agradecimientos ========================= */
+
+.agradecimientos {
+  margin-top: 10%;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.agradecimientos h1,
+p {
+  color: white;
+  text-align: center;
+}
+
+.agradecimientos h1 {
+  text-shadow: 2px 2px 4px rgba(241, 66, 8, 0.84);
+}
+
+.agradecimientos p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.container-agradecimiento {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 350px;
+  height: 400px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(138, 43, 226, 0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-content {
+  transform: translateY(0);
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0 0 10px;
+  color: #9b59b6;
+}
+
+p {
+  font-size: 1em;
+  margin: 0;
+  color: #ecf0f1;
+}
+
+.glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(138, 43, 226, 0.4) 0%,
+    rgba(138, 43, 226, 0) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card:hover .glow {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .agradecimientos p {
+    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+
+  .card {
+    width: 45%; /* Ajusta el ancho de las tarjetas en pantallas más pequeñas */
+    min-width: 200px; /* Ajusta el ancho mínimo de las tarjetas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .agradecimientos p {
+    font-size: 0.875rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+  }
+
+  .card {
+    width: 90%; /* Ajusta el ancho de las tarjetas en pantallas muy pequeñas */
+    min-width: 150px; /* Ajusta el ancho mínimo de las tarjetas en pantallas muy pequeñas */
+  }
+}
+
+/* ========================= Contacto ========================= */
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.contact-text1 h1,
+.contact-text2 h1,
+p {
+  color: white;
+  text-align: center;
+}
+
+.strong {
+  color: #d4af37;
+  text-shadow: 0 0 4px rgba(229, 241, 8, 0.84);
+}
+
+.contact-text1 h1 {
+  font-size: 1.8rem;
+}
+
+.contact-text2 p {
+  margin-top: 4%;
+  font-size: 1.2rem;
+}
+
+.contact-item {
+  width: 80vw;
+  height: auto;
+  margin-top: 5%;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-item img {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 15px; /* Reduce el padding en pantallas más pequeñas */
+  }
+
+  .contact-text1 h1,
+  .contact-text2 h1,
+  p {
+    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .contact-info {
+    padding: 10px; /* Reduce aún más el padding en pantallas muy pequeñas */
+  }
+
+  .contact-text1 h1,
+  .contact-text2 h1,
+  p {
+    font-size: 0.875rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+  }
+}
+
+/* ========================= Boton flotante whatsapp ========================= */
+
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .whatsapp-content {
+    width: 50px; /* Ajusta el ancho en pantallas más pequeñas */
+    height: 50px; /* Ajusta la altura en pantallas más pequeñas */
+    bottom: 15px; /* Ajusta la posición en pantallas más pequeñas */
+    right: 15px; /* Ajusta la posición en pantallas más pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .whatsapp-content {
+    width: 40px; /* Ajusta el ancho en pantallas muy pequeñas */
+    height: 40px; /* Ajusta la altura en pantallas muy pequeñas */
+    bottom: 10px; /* Ajusta la posición en pantallas muy pequeñas */
+    right: 10px; /* Ajusta la posición en pantallas muy pequeñas */
+  }
+}
+
+

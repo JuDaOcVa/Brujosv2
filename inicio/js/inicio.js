@@ -111,68 +111,28 @@
         prevBtn.addEventListener('click', () => rotateCarousel(1));
         nextBtn.addEventListener('click', () => rotateCarousel(-1));
 
-//======================= Boton flotante del whatsapp ==================================
+//======================= Agradecimientos ================================================
 
-let message = " a los poderosos brujos";
+        function revealContent(card) {
+            const content = card.querySelector('.card-content');
+            content.style.transform = content.style.transform === 'translateY(0px)' ? 'translateY(100%)' : 'translateY(0)';
+        }
 
-document.getElementById('whatsapp-button').addEventListener('click', function(event) {
-    event.preventDefault();
-    console.log(message);
-
-    
-    var url = 'https://wa.me/+13234099650?l=es&text=Hola%2C%20vi%20su%20pagina%20web%20y%20deseo%20realizar%20una%20consulta' + encodeURIComponent(message);
-
-    window.open(url, '_blank');
-});
-
-//======================= Footer ==================================
-
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-const magicalStars = document.getElementById('magicalStars');
-const numberOfStars = 50;
-
-for (let i = 0; i < numberOfStars; i++) {
-    const star = document.createElement('div');
-    star.classList.add('star');
-    star.style.width = `${Math.random() * 3 + 1}px`;
-    star.style.height = star.style.width;
-    star.style.left = `${Math.random() * 100}%`;
-    star.style.top = `${Math.random() * 100}%`;
-    star.style.animationDelay = `${Math.random() * 3}s`;
-    magicalStars.appendChild(star);
-}
-
-//======================= Navbar ==================================
-document.addEventListener('DOMContentLoaded', function() {
-    const navbarToggle = document.getElementById('navbar-toggle');
-    const navbarMenu = document.getElementById('navbar-menu');
-
-    navbarToggle.addEventListener('click', function() {
-        navbarMenu.classList.toggle('active');
-    });
-
-    // Handle dropdowns on mobile
-    const dropdowns = document.querySelectorAll('.navbar-item');
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                const dropdownContent = this.querySelector('.dropdown-content');
-                if (dropdownContent) {
-                    e.preventDefault();
-                    dropdownContent.classList.toggle('active');
-                }
-                const nestedDropdownContent = this.querySelector('.nested-dropdown-content');
-                if (nestedDropdownContent) {
-                    e.preventDefault();
-                    nestedDropdownContent.classList.toggle('active');
-                }
-            }
+        // Create a magical sparkle effect
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = `${x}px`;
+                sparkle.style.top = `${y}px`;
+                card.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    sparkle.remove();
+                }, 1000);
+            });
         });
-    });
-});
-
-
-
-
-        

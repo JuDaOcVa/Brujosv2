@@ -25,61 +25,67 @@
       brujos en estados unidos, brujos consulta gratis, amarres"
     />
     <!-- ========================= CSS here ========================= -->
-    <link rel="stylesheet" href="css/index.css" />
-
-    <!-- ========================= BOOTSTRAP here ========================= -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="../css/inicio.css" />
+    <link rel="stylesheet" href="../../navbar/css/navbar.css" />
+    <link rel="stylesheet" href="../../whatsapp-bottom/css/bottom.css" />
+    <link rel="stylesheet" href="../../footer/css/footer.css" />
   </head>
 
   <body>
-    <div class="background">
-      <div class="mist"></div>
-    </div>
     <!-- ========================= HEADER here ========================= -->
     <header>
       <!-- =========================  NAVBAR (MENU) ========================= -->
       <nav class="navbar">
         <div class="navbar-container">
-            <div class="navbar-logo">Brujos de Catemaco</div>
-            <button class="navbar-toggle" id="navbar-toggle">☰</button>
-            <ul class="navbar-menu" id="navbar-menu">
-                <li class="navbar-item"><a href="#" class="navbar-link">Inicio</a></li>
-                <li class="navbar-item">
-                    <a href="#" class="navbar-link">Servicios</a>
-                    <div class="dropdown-content">
-                        <a href="#">Servicio 1</a>
-                        <a href="#">Servicio 2</a>
-                        <div class="nested-dropdown">
-                            <a href="#">Servicio 3</a>
-                            <div class="nested-dropdown-content">
-                                <a href="#">Subservicio 1</a>
-                                <a href="#">Subservicio 2</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="navbar-item"><a href="#" class="navbar-link">Testimonios</a></li>
-                <li class="navbar-item"><a href="#" class="navbar-link">Contactos</a></li>
-            </ul>
+          <div class="navbar-logo">Brujos de Catemaco</div>
+          <button class="navbar-toggle" id="navbar-toggle">☰</button>
+          <ul class="navbar-menu" id="navbar-menu">
+            <li class="navbar-item">
+              <a href="../../inicio/html/inicio.html" class="navbar-link"
+                >Inicio</a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="../../servicios/html/servicios.html" class="navbar-link"
+                >Servicios</a
+              >
+              <div class="dropdown-content">
+                <a href="#">Dominios</a>
+                <a href="#">Alejamientos</a>
+                <div class="nested-dropdown">
+                  <a href="#">Amarres</a>
+                  <div class="nested-dropdown-content">
+                    <a href="#">Amarre near to me</a>
+                    <a href="#">Amarre para Homosexuales</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Testimonios</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Contactos</a>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
     </header>
 
-      <!-- =========================  BANNER ========================= -->
-      <div class="container-banner">
-        <h1>BRUJOS DE CATEMACO EXPERTOS EN AMARRES DE AMOR Y BRUJERÍA</h1>
-        <div class="banner">
-          <div class="container-img col-md-5 mb-3">
-            <img
-              src="https://png.pngtree.com/png-clipart/20231026/original/pngtree-skull-with-flowers-cartoon-vector-illustration-skeleton-element-for-halloween-decoration-png-image_13442657.png"
-              alt="Brujos en U.S.A"
-            />
+    <!-- =========================  BANNER ========================= -->
+    <div class="container-banner">
+      <div class="background">
+        <div class="mist"></div>
+      </div>
+      <div class="banner">
+        <div class="banner-title">
+          <h1>BRUJOS DE CATEMACO EXPERTOS EN AMARRES DE AMOR Y BRUJERÍA</h1>
+        </div>
+        <div class="division-banner">
+          <div class="container-img">
+            <img src="../../img/logo.png" alt="Brujos en U.S.A" />
           </div>
+
           <div class="container-text">
             <h3 class="banner-subtitle">
               Recupera a tu ser amado <strong class="highlight">¡HOY!</strong>
@@ -93,6 +99,7 @@
               💘 Comienza tu consulta <strong>AHORA</strong>. ¡Tu felicidad está
               a un clic de distancia! 💘.
             </p>
+            <!-- ========================= Boton ========================= -->
             <div class="spell-book-container">
               <div class="spell-book" id="whatsappButton">
                 <div class="magical-aura"></div>
@@ -105,8 +112,9 @@
           </div>
         </div>
       </div>
+    </div>
     <!-- ========================= SECTION here ========================= -->
-    <section class="we-do-section pt-100">
+    <section>
       <div class="container-section">
         <div class="text-container">
           <h2>
@@ -138,7 +146,11 @@
           </h1>
           <div class="container-information">
             <div class="container-img1">
-              <img class="brujos" src="img/brujos.png" alt="Brujos reunidos" />
+              <img
+                class="brujos"
+                src="../../img/brujos.png"
+                alt="Brujos reunidos"
+              />
             </div>
             <div class="text-info">
               <p>
@@ -162,7 +174,7 @@
               </p>
             </div>
             <div class="container-img2">
-              <img class="pareja" src="img/pareja.png" alt="Pareja" />
+              <img class="pareja" src="../../img/pareja.png" alt="Pareja" />
             </div>
           </div>
         </div>
@@ -178,14 +190,16 @@
             para ayudarte a encontrar la paz, el amor y la felicidad que
             mereces.
           </p>
-          <div class="testimonios">
+
+
+    
             <div class="carousel-video-container">
               <!-- =========================  Carousel ========================= -->
               <div class="carousel-container">
                 <div class="carousel">
                   <div class="item">
                     <img
-                      src="img/testimonio1.png"
+                      src="../../img/testimonio1.png"
                       alt="Alejandra W - Houston"
                     />
                     <p>
@@ -202,7 +216,10 @@
                     </p>
                   </div>
                   <div class="item">
-                    <img src="img/testimonio2.png" alt="Jhon S - Washington" />
+                    <img
+                      src="../../img/testimonio2.png"
+                      alt="Jhon S - Washington"
+                    />
                     <p>
                       "Mi novia y yo teníamos muchos problemas porque estábamos
                       muy ocupados y ya no pasábamos tiempo juntos. Nuestros
@@ -218,7 +235,7 @@
                   </div>
                   <div class="item">
                     <img
-                      src="img/testimonio3.png"
+                      src="../../img/testimonio3.png"
                       alt="Carol A - Washington DC"
                     />
                     <p>
@@ -233,7 +250,10 @@
                     </p>
                   </div>
                   <div class="item">
-                    <img src="img/user.webp" alt="Sharon A - California" />
+                    <img
+                      src="../../img/user.webp"
+                      alt="Sharon A - California"
+                    />
                     <p>
                       “No creo en estas cosas, pero después de lo que pasó, no
                       puedo negar lo efectivos que son estos brujos. Siempre me
@@ -248,7 +268,7 @@
                     </p>
                   </div>
                   <div class="item">
-                    <img src="img/user.webp" alt="Jeffer W - New York" />
+                    <img src="../../img/user.webp" alt="Jeffer W - New York" />
                     <p>
                       “No hay nada más humillante que enfrentarse a la
                       disfunción eréctil. Comenzó a arruinar mi vida, mi
@@ -263,7 +283,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="nav">
+                <div class="buttom-nav">
                   <button id="prev">Previous</button>
                   <button id="next">Next</button>
                 </div>
@@ -279,7 +299,9 @@
                 </video>
               </div>
             </div>
-          </div>
+          
+
+
         </div>
         <div class="agradecimientos">
           <h1>
@@ -289,45 +311,32 @@
             Nosotros los brujos en linea, brujos near me, brujos de catemaco
             podríamos guiarte, envíanos tu caso por whatsapp las 24 horas.
           </p>
-          <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".2s">
-                <img
-                  src="img/chat1.png"
-                  alt="brujos en usa"
-                  width="360"
-                  height="588"
-                  class="img-fluid wow fadeInUp"
-                  data-wow-delay=".4s"
-                />
+
+          <div class="container-agradecimiento">
+            <div class="card" onclick="revealContent(this)">
+              <img src="../../img/chat1.png" alt="Witchcraft Image 1" />
+              <div class="card-content">
+                <p>John Doe</p>
               </div>
+              <div class="glow"></div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".4s">
-                <img
-                  src="img/chat2.png"
-                  alt="brujos en usa"
-                  width="360"
-                  height="588"
-                  class="img-fluid wow fadeInUp"
-                  data-wow-delay=".4s"
-                />
+            <div class="card" onclick="revealContent(this)">
+              <img src="../../img/chat2.png" alt="Witchcraft Image 2" />
+              <div class="card-content">
+                <p>Sandra</p>
               </div>
+              <div class="glow"></div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".4s">
-                <img
-                  src="img/chat3.png"
-                  alt="brujos en usa"
-                  width="320"
-                  height="568"
-                  class="img-fluid wow fadeInUp"
-                  data-wow-delay=".4s"
-                />
+            <div class="card" onclick="revealContent(this)">
+              <img src="../../img/chat3.png" alt="Witchcraft Image 3" />
+              <div class="card-content">
+                <p>Steven Arizon</p>
               </div>
+              <div class="glow"></div>
             </div>
           </div>
         </div>
+        <!-- =========================  contacto ========================= -->
         <div class="contacto">
           <div class="contact-info">
             <div class="contact-text1">
@@ -344,12 +353,7 @@
               <a
                 onclick="return gtag_report_conversion('https://wa.me/+13234099650?l=es&text=Hola%2C%20vi%20su%20pagina%20web%20y%20deseo%20realizar%20una%20consulta');"
                 href="https://wa.me/+13234099650?l=es&text=Hola%2C%20vi%20su%20pagina%20web%20y%20deseo%20realizar%20una%20consulta"
-                ><img
-                  src="img/wtsp.webp"
-                  alt="whatsapp en usa"
-                  width="290"
-                  height="96"
-                  class="img-fluid text-center fadeInDown mt-1 mr-lg-4"
+                ><img src="../../img/wtsp.webp" alt="whatsapp en usa"
               /></a>
             </div>
             <div class="contact-text2">
@@ -393,21 +397,23 @@
     </a>
     <!-- ========================= FOOTER ========================= -->
     <footer>
-      <div class="magical-stars" id="magicalStars"></div>
-      <div class="footer-content">
-        <div class="footer-links">
-          <a href="terminosycondiciones.html">Terminos y condiciones</a>
-        </div>
-        <div class="copyright">
-          &copy; <span id="currentYear"></span> Copyright 2023| Esta página de
-          <a href="https://www.brujos.co/" target="_self">Brujos</a>,
-          <a href="https://www.estrategias.us/" target="_blank"
-            >amarres de amor</a
-          >
-          fue elaborada por:
-          <a href="https://www.estrategias.us/" target="_blank"
-            >Marketing para brujos</a
-          >
+      <div class="content">
+        <div class="magical-stars" id="magicalStars"></div>
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="terminosycondiciones.html">Terminos y condiciones</a>
+          </div>
+          <div class="copyright">
+            &copy; <span id="currentYear"></span> Copyright 2023| Esta página de
+            <a href="https://www.brujos.co/" target="_self">Brujos</a>,
+            <a href="https://www.estrategias.us/" target="_blank"
+              >amarres de amor</a
+            >
+            fue elaborada por:
+            <a href="https://www.estrategias.us/" target="_blank"
+              >Marketing para brujos</a
+            >
+          </div>
         </div>
       </div>
     </footer>
@@ -416,7 +422,10 @@
     <!-- =========================  here ========================= -->
 
     <!-- ========================= JS here ========================= -->
-    <script src="js/script.js"></script>
+    <script src="../js/inicio.js"></script>
+    <script src="../../navbar/js/navbar.js"></script>
+    <script src="../../whatsapp-bottom/js/bottom.js"></script>
+    <script src="../../footer/js/footer.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
