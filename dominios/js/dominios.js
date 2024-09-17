@@ -1,4 +1,3 @@
-
 //======================= Background body ================================================
 const symbols = '☠︎☽♆⚰︎⚱︎☾♱⛧⍟✠✯';
 const background = document.querySelector('.background');
@@ -44,30 +43,5 @@ document.addEventListener('mousemove', (e) => {
             symbol.style.color = 'rgba(255, 0, 0, 0.6)';
             symbol.style.textShadow = 'none';
         }
-    });
-});
-
-//======================= Card ================================================
-
-function revealContent(card) {
-    const content = card.querySelector('.card-content');
-    content.style.transform = content.style.transform === 'translateY(0px)' ? 'translateY(100%)' : 'translateY(0)';
-}
-
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const sparkle = document.createElement('div');
-        sparkle.className = 'sparkle';
-        sparkle.style.left = `${x}px`;
-        sparkle.style.top = `${y}px`;
-        card.appendChild(sparkle);
-        
-        setTimeout(() => {
-            sparkle.remove();
-        }, 1000);
     });
 });

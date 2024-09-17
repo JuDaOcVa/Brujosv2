@@ -6,6 +6,10 @@ body {
   height: 100%;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 /* ========================= Background ========================= */
 .background {
   position: fixed;
@@ -68,40 +72,19 @@ body {
   margin-top: 5%;
 }
 
-.division-banner{
+.division-banner {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container-banner h1 {
+.banner-title h1 {
   text-align: center;
   font-size: 2.5rem;
   color: white;
   text-shadow: 2px 2px 4px rgba(229, 241, 8, 0.84);
 }
 
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .container-banner {
-    margin-top: 10%;
-  }
-
-  .container-banner h1 {
-    font-size: 2rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-  }
-}
-
-/* Media queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .container-banner {
-    margin-top: 15%;
-  }
-
-  .container-banner h1 {
-    font-size: 1.5rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
-  }
-}
 /* ========================= Logo Banner ========================= */
 
 .container-img {
@@ -121,19 +104,6 @@ body {
   object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
 }
 
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .container-img {
-    width: 80%; /* Ajusta el ancho al 80% del contenedor en pantallas más pequeñas */
-  }
-}
-
-/* Media queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .container-img {
-    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas muy pequeñas */
-  }
-}
 /* ========================= Texto Banner ========================= */
 
 .banner-text1,
@@ -216,52 +186,6 @@ body {
   color: white !important;
 }
 
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .banner-text1 {
-    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-  }
-
-  .banner-text2 {
-    font-size: 1.2rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-  }
-
-  .container-text {
-    width: 80%; /* Ajusta el ancho al 80% del contenedor en pantallas más pequeñas */
-  }
-
-  .banner-subtitle {
-    font-size: 1.5rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-  }
-
-  .highlight {
-    font-size: 1.2em; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-  }
-}
-
-/* Media queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .banner-text1 {
-    font-size: 0.8rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
-  }
-
-  .banner-text2 {
-    font-size: 1rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
-  }
-
-  .container-text {
-    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas muy pequeñas */
-  }
-
-  .banner-subtitle {
-    font-size: 1.2rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
-  }
-
-  .highlight {
-    font-size: 1em; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
-  }
-}
-
 /* ========================= Boton Banner ========================= */
 
 .spell-book-container {
@@ -269,7 +193,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 3%;
-  
 }
 
 .spell-book {
@@ -377,30 +300,6 @@ body {
   pointer-events: none;
 }
 
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .spell-book {
-    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas más pequeñas */
-    height: 45px; /* Ajusta la altura en pantallas más pequeñas */
-  }
-
-  .spell-book-text {
-    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-    line-height: 45px; /* Ajusta la altura de línea en pantallas más pequeñas */
-  }
-}
-/* Media queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .spell-book {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor en pantallas muy pequeñas */
-    height: 40px; /* Ajusta la altura en pantallas muy pequeñas */
-  }
-  .spell-book-text {
-    font-size: 0.5rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
-    line-height: 40px; /* Ajusta la altura de línea en pantallas muy pequeñas */
-  }
-}
-
 /* ========================= Seccion brujos ========================= */
 
 .container-section {
@@ -432,19 +331,11 @@ p {
 
 .text-container hr {
   width: 60%;
-  height: 4px;
+  height: 3px;
   margin: 0 auto;
-  background-color: #ec2a08;
-  border: 1px solid tomato;
-  transition: border-color 0.5s ease;
-  cursor: pointer;
-}
-
-.text-container hr:hover {
-  width: 60%;
-  height: 4px;
-  margin: 0 auto;
-  background-color: brown;
+  border: 0;
+  background: #ffffff;
+  background-image: linear-gradient(to right, #423939, #930505, #423636);
 }
 
 .pareja {
@@ -500,35 +391,6 @@ p {
 .container-witchcraft {
   margin-top: 5%;
 }
-
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .container-information {
-    flex-direction: column; /* Cambia la dirección del flex a columna para pantallas más pequeñas */
-    text-align: center;
-  }
-
-  .text-container p {
-    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-    margin: 2%;
-  }
-
-  .text-container hr {
-    width: 80%; /* Ajusta el ancho del hr en pantallas más pequeñas */
-  }
-}
-
-/* Media queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .text-container p {
-    font-size: 0.875rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
-    margin: 1%;
-  }
-
-  .text-container hr {
-    width: 90%; /* Ajusta el ancho del hr en pantallas muy pequeñas */
-  }
-}
 /* ========================= testimonios brujos ========================= */
 
 .container-testimonios {
@@ -551,34 +413,6 @@ p {
   text-align: justify;
 }
 
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .container-information {
-    flex-direction: column; /* Cambia la dirección del flex a columna para pantallas más pequeñas */
-    text-align: center;
-  }
-
-  .text-container p {
-    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-    margin: 2%;
-  }
-
-  .text-container hr {
-    width: 80%; /* Ajusta el ancho del hr en pantallas más pequeñas */
-  }
-}
-
-/* Media queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .text-container p {
-    font-size: 0.875rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
-    margin: 1%;
-  }
-
-  .text-container hr {
-    width: 90%; /* Ajusta el ancho del hr en pantallas muy pequeñas */
-  }
-}
 /* ========================= carousel ========================= */
 
 .carousel-video-container {
@@ -604,7 +438,6 @@ p {
   transform-style: preserve-3d;
   transition: transform 1s;
   perspective: 1000px;
-
 }
 
 .carousel img {
@@ -660,30 +493,6 @@ p {
   background-color: #c73e54;
 }
 
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .carousel-container {
-    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas más pequeñas */
-    max-width: 250px; /* Ajusta el ancho máximo en pantallas más pequeñas */
-  }
-
-  .carousel p {
-    padding: 10px 15px; /* Reduce el padding en pantallas más pequeñas */
-  }
-}
-
-/* Media queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .carousel-container {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor en pantallas muy pequeñas */
-    max-width: 200px; /* Ajusta el ancho máximo en pantallas muy pequeñas */
-  }
-
-  .carousel p {
-    padding: 10px 10px; /* Reduce aún más el padding en pantallas muy pequeñas */
-  }
-}
-
 /* ========================= Video ========================= */
 
 .video-testimonio {
@@ -702,27 +511,6 @@ p {
   border-radius: 5px; /* Opcional: agrega bordes redondeados */
 }
 
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .video-testimonio {
-    width: 90%; /* Ajusta el ancho al 90% del contenedor en pantallas más pequeñas */
-  }
-
-  .video-testimonio video {
-    width: 100%; /* Asegura que el video ocupe el 100% del contenedor */
-  }
-}
-
-/* Media queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .video-testimonio {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor en pantallas muy pequeñas */
-  }
-
-  .video-testimonio video {
-    width: 100%; /* Asegura que el video ocupe el 100% del contenedor */
-  }
-}
 /* ========================= Agradecimientos ========================= */
 
 .agradecimientos {
@@ -766,7 +554,6 @@ p {
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 350px;
-  height: 400px;
 }
 
 .card:hover {
@@ -831,32 +618,6 @@ p {
 .card:hover .glow {
   opacity: 1;
 }
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .agradecimientos p {
-    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-  }
-
-  .card {
-    width: 45%; /* Ajusta el ancho de las tarjetas en pantallas más pequeñas */
-    min-width: 200px; /* Ajusta el ancho mínimo de las tarjetas en pantallas más pequeñas */
-  }
-}
-
-@media (max-width: 480px) {
-  .agradecimientos p {
-    font-size: 0.875rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
-  }
-
-  .card {
-    width: 90%; /* Ajusta el ancho de las tarjetas en pantallas muy pequeñas */
-    min-width: 150px; /* Ajusta el ancho mínimo de las tarjetas en pantallas muy pequeñas */
-  }
-}
 
 /* ========================= Contacto ========================= */
 
@@ -864,7 +625,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   flex-direction: column;
 }
 
@@ -892,7 +653,6 @@ p {
 .contact-item {
   width: 80vw;
   height: auto;
-  margin-top: 5%;
   max-width: 600px;
   padding: 20px;
   box-sizing: border-box;
@@ -904,34 +664,628 @@ p {
   border-radius: 10px;
 }
 
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .contact-info {
-    padding: 15px; /* Reduce el padding en pantallas más pequeñas */
-  }
+/* ========================= MEDIA QUERIE ========================= */
 
-  .contact-text1 h1,
-  .contact-text2 h1,
-  p {
-    font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+@media (max-width: 480px) {
+  /* Banner */
+  .container-section {
+    padding: 10px;
+    font-size: 1em;
+  }
+  .banner-title h1 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .division-banner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .container-information {
+    margin: 5px;
+  }
+  .container-img {
+    width: 100%;
+    height: auto;
+  }
+  .container-img img {
+    width: 90%;
+    height: auto;
+  }
+  .container-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .banner-subtitle {
+    font-size: 2rem;
+  }
+  .banner-text1 {
+    width: 90%;
+    font-size: 1.4rem;
+  }
+  .banner-text2 {
+    width: 90%;
+    font-size: 1.5rem;
+    margin-top: 5%;
+  }
+  .spell-book-container {
+    width: 100%;
+    justify-content: center;
+  }
+  .spell-book {
+    width: 90%;
+    margin-top: 3%;
+  }
+  .spell-book-text {
+    font-size: 1rem;
+  }
+  /* ========================= Seccion brujos ========================= */
+  .container-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-container h2 {
+    width: 81%;
+    text-align: justify;
+    font-size: 1.8rem;
+  }
+  .text-container hr{
+    width: 82%;
+    margin-right: 20%;
+  }
+  .text-container p {
+    width: 73%;
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+  .container-witchcraft{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-witch{
+    width: 80%;
+    margin-right: 19%;
+    font-size: 1.8rem;
+    text-align: justify;
+  }
+  .container-information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-img1, .container-img2{
+    width: 100%;
+    margin-right: 23%;
+  }
+  .container-img1 img{
+    width: 90%;
+    height: auto;
+  }
+  .text-info{
+    width: 100%;
+  }
+  .text-info p{
+    width: 76%;
+    font-size: 1.5rem;
+  }
+  /* ========================= Testimonios ========================= */
+  .container-testimonios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-testimonios h1{
+    width: 90%;
+    text-align: justify;
+    font-size: 1.8rem;
+    margin-right: 20%;
+  }
+  .container-testimonios p{
+    width: 81%;
+    font-size: 1.5rem;
+    margin-right: 23%;
+  }
+  .carousel-video-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
+  }
+  .carousel-container{
+    width: 100%;
+    margin-right: 22%;
+  }
+  /* ========================= Agradecimientos ========================= */
+  .agradecimientos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .agradecimientos h1{
+    width: 85%;
+    text-align: justify;
+    font-size: 1.8rem;
+    margin-right: 20%;
+  }
+  .agradecimientos p{
+    width: 81%;
+    font-size: 1.5rem;
+    margin-right: 23%;
+    text-align: justify;
+  }
+  .container-agradecimiento{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 19%;
+  }
+  /* ========================= Contacto ========================= */
+  .contacto {
+    margin-top: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info{
+    width: 100%;
+    display: flex;
+    margin-right: 20%;
+  }
+  .contact-text1 h1{
+    text-align: justify;
+    font-size: 1.8rem;
+    align-items: center;
+    margin: 30px;
+  }
+  .contact-item{
+    margin-left: 21%;
+  }
+  .contact-text2 p{
+    text-align: justify;
+    font-size: 1.3rem;
+    align-items: center;
+    margin: 30px;
+  }
+  /* ========================= footer ========================= */
+  footer{
+    margin-top: 15%;
   }
 }
 
-/* Media queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .contact-info {
-    padding: 10px; /* Reduce aún más el padding en pantallas muy pequeñas */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Banner */
+  .container-section {
+    padding: 20px;
+    font-size: 1.2em;
   }
+  .banner-title h1 {
+    width: 98%;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .container-information {
+    margin: 10px;
+  }
+  .container-img {
+    width: 50%;
+    height: auto;
+  }
+  .container-img img {
+    width: 100%;
+    height: auto;
+  }
+  .container-text {
+    width: 50%;
+  }
+  .banner-subtitle,
+  .banner-text1,
+  .banner-text2 {
+    width: 91%;
+  }
+  .banner-subtitle {
+    font-size: 2.7rem;
+  }
+  .banner-text1 {
+    font-size: 1.8rem;
+  }
+  .banner-text2 {
+    font-size: 2rem;
+    margin-top: 5%;
+  }
+  .spell-book-container {
+    width: 100%;
+    justify-content: center;
+  }
+  .spell-book {
+    width: 90%;
+    margin-top: 3%;
+  }
+  .spell-book-text {
+    font-size: 1rem;
+  }
+  /* ========================= Seccion brujos ========================= */
+  .container-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-container h2 {
+    width: 85%;
+    text-align: center;
+    font-size: 2.3rem;
+  }
+  .text-container hr{
+    width: 81%;
+    margin-right: 16%;
+  }
+  .text-container p {
+    width: 81%;
+    font-size: 2rem;
+    text-align: justify;
+  }
+  .container-witchcraft{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-witch{
+    width: 80%;
+    margin-right: 15%;
+    font-size: 2.3rem;
+    text-align: justify;
+  }
+  .container-information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-img1, .container-img2{
+    width: 100%;
+    margin-right: 14%;
+  }
+  .container-img1 img{
+    width: 90%;
+    height: auto;
+  }
+  .text-info{
+    width: 100%;
+  }
+  .text-info p{
+    width: 86%;
+    font-size: 2rem;
+  }
+  /* ========================= Testimonio ========================= */
+  .container-testimonios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-testimonios h1{
+    width: 85%;
+    text-align: justify;
+    font-size: 2.3rem;
+    margin-right: 15%;
+  }
+  .container-testimonios p{
+    width: 80%;
+    font-size: 2rem;
+    margin-right: 16%;
+  }
+  .carousel-video-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+  .carousel-container{
+    width: 100%;
+    margin-right: 22%;
+  }
+  /* ========================= Agradecimientos ========================= */
+  .agradecimientos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .agradecimientos h1{
+    width: 90%;
+    text-align: justify;
+    font-size: 2.3rem;
+    margin-right: 12%;
+  }
+  .agradecimientos p{
+    width: 80%;
+    font-size: 2rem;
+    margin-right: 10%;
+    text-align: justify;
+  }
+  .container-agradecimiento{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 14%;
+  }
+  .card{
+    width: 500px;
+    height: auto;
+  }
+  /* ========================= Contacto ========================= */
+  .contacto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info{
+    width: 100%;
+    display: flex;
+    margin-right: 10%;
+  }
+  .contact-text1 h1{
+    text-align: justify;
+    font-size: 2.3rem;
+    align-items: center;
+    margin: 30px;
+  }
+  .contact-item{
+    margin-left: 21%;
+  }
+  .contact-text2 p{
+    text-align: justify;
+    font-size: 2rem;
+    align-items: center;
+    margin: 30px;
+  }
+}
 
-  .contact-text1 h1,
-  .contact-text2 h1,
-  p {
-    font-size: 0.875rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Banner */
+  .container-section {
+    padding: 30px;
+    font-size: 1.4em;
+  }
+  .banner-title h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .container-information {
+    margin: 15px;
+  }
+  .container-img {
+    width: 50%;
+    height: auto;
+  }
+  .container-img img {
+    width: 100%;
+    height: auto;
+  }
+  .container-text {
+    width: 50%;
+  }
+  .banner-subtitle,
+  .banner-text1,
+  .banner-text2 {
+    width: 92%;
+  }
+  .banner-subtitle {
+    font-size: 2.8rem;
+  }
+  .banner-text1 {
+    font-size: 1.8rem;
+  }
+  .banner-text2 {
+    font-size: 2rem;
+    margin-top: 5%;
+  }
+  .spell-book-container {
+    width: 96%;
+    justify-content: center;
+  }
+  .spell-book {
+    width: 100%;
+    margin-top: 3%;
+  }
+  /* ========================= Seccion brujos ========================= */
+  .container-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-container h2 {
+    width: 90%;
+    text-align: center;
+    font-size: 2.3rem;
+  }
+  .text-container hr{
+    width: 78%;
+    margin-right: 15%;
+  }
+  .text-container p {
+    width: 85%;
+    font-size: 2rem;
+    text-align: justify;
+  }
+  .container-witchcraft{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-witch{
+    width: 80%;
+    margin-right: 10%;
+    font-size: 2.3rem;
+    text-align: justify;
+  }
+  .container-information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-img1, .container-img2{
+    width: 100%;
+    margin-right: 12%;
+  }
+  .container-img1 img{
+    width: 90%;
+    height: auto;
+  }
+  .text-info{
+    width: 100%;
+  }
+  .text-info p{
+    margin-left: 2%;
+    width: 86%;
+    font-size: 2rem;
+  }
+  /* ========================= Testimonio ========================= */
+  .container-testimonios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-testimonios h1{
+    width: 90%;
+    text-align: justify;
+    font-size: 2.3rem;
+    margin-right: 10%;
+  }
+  .container-testimonios p{
+    width: 85%;
+    font-size: 2rem;
+    margin-right: 15%;
+  }
+  .carousel-video-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+  .carousel-container{
+    width: 100%;
+  }
+  /* ========================= Agradecimientos ========================= */
+  .agradecimientos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .agradecimientos h1{
+    width: 90%;
+    text-align: justify;
+    font-size: 2.3rem;
+    margin-right: 10%;
+  }
+  .agradecimientos p{
+    width: 80%;
+    font-size: 2rem;
+    margin-right: 10%;
+    text-align: justify;
+  }
+  .container-agradecimiento{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 14%;
+  }
+  .card{
+    width: 500px;
+    height: auto;
+  }
+  /* ========================= Contacto ========================= */
+  .contacto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info{
+    width: 100%;
+    display: flex;
+    margin-right: 10%;
+  }
+  .contact-text1 h1{
+    text-align: justify;
+    font-size: 2.3rem;
+    align-items: center;
+    margin: 30px;
+  }
+  .contact-item{
+    margin-left: 21%;
+  }
+  .contact-text2 p{
+    text-align: justify;
+    font-size: 2rem;
+    align-items: center;
+    margin: 30px;
+  }
+}
+
+
+
+
+
+
+
+@media (min-width: 1025) and (max-width: 1200px) {
+  /* Banner */
+  .container-section {
+    padding: 40px;
+    font-size: 1.6em;
+  }
+  .banner-title h1 {
+    font-size: 2rem;
+  }
+  .container-information {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 1201px) {
+  /* Banner */
+  .container-section {
+    padding: 40px;
+    font-size: 1.6em;
+  }
+  .banner-title h1 {
+    font-size: 2rem;
+  }
+  .container-information {
+    margin: 20px;
   }
 }
 
 /* ========================= Boton flotante whatsapp ========================= */
-
 
 /* Media queries para pantallas más pequeñas */
 @media (max-width: 768px) {
@@ -952,5 +1306,3 @@ p {
     right: 10px; /* Ajusta la posición en pantallas muy pequeñas */
   }
 }
-
-
