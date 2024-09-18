@@ -5,10 +5,12 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 /* ========================= Background ========================= */
 .background {
@@ -408,8 +410,8 @@ p {
 }
 
 .container-testimonios p {
-  font-size: 1.2rem;
-  margin: 3%;
+  font-size: 0.8rem;
+  margin: 5%;
   text-align: justify;
 }
 
@@ -418,42 +420,32 @@ p {
 .carousel-video-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ajusta según tus necesidades */
+  justify-content: space-evenly; /* Ajusta según tus necesidades */
+}
+
+.carousel-container-commands{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 .carousel-container {
-  margin-left: 10%;
-  margin-top: 5%;
   width: 300px;
   height: 400px;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  perspective: 1000px;
 }
-
 .carousel {
   width: 100%;
-  height: 80%;
+  height: 100%;
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
-  perspective: 1000px;
 }
-
-.carousel img {
-  margin-top: 10%;
-}
-
-.carousel p {
-  padding: 10px 40px;
-  color: white;
-  font-size: 10px;
-}
-
 .item {
   position: absolute;
   width: 280px;
-  height: 380px;
+  height: 400px;
   background-color: #16213e;
   border: 2px solid #e94560;
   border-radius: 10px;
@@ -465,20 +457,16 @@ p {
   backface-visibility: hidden;
   box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
 }
-
 .item img {
   width: 100px;
   height: 100px;
-  margin-bottom: 20px;
 }
-
-.buttom-nav {
-  width: 100%;
+.button-nav {
   text-align: center;
+  margin-top: 25%;
 }
-
-.buttom-nav button {
-  background-color: #a30000;
+.button-nav button {
+  background-color: #e94560;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -488,11 +476,9 @@ p {
   font-size: 16px;
   transition: background-color 0.3s;
 }
-
-.buttom-nav button:hover {
+.button-nav button:hover {
   background-color: #c73e54;
 }
-
 /* ========================= Video ========================= */
 
 .video-testimonio {
@@ -664,7 +650,7 @@ p {
   border-radius: 10px;
 }
 
-/* ========================= MEDIA QUERIE ========================= */
+/* ========================= MEDIA QUERY ========================= */
 
 @media (max-width: 480px) {
   /* Banner */
@@ -785,27 +771,81 @@ p {
     align-items: center;
   }
   .container-testimonios h1{
-    width: 90%;
-    text-align: justify;
+    width: 80%;
+    margin-right: 19%;
     font-size: 1.8rem;
-    margin-right: 20%;
+    text-align: justify;
   }
+  .container-testimonios .carousel p{
+    width: 85%;
+    font-size: 0.7rem;
+    text-align: justify;
+    align-self:center;
+  }
+
   .container-testimonios p{
-    width: 81%;
+    width: 76%;
     font-size: 1.5rem;
-    margin-right: 23%;
+    text-align: justify;
+    align-self: flex-start;
+    margin:0;
   }
+
   .carousel-video-container{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 25%;
   }
-  .carousel-container{
-    width: 100%;
-    margin-right: 22%;
+  .carousel-container {
+    width: 250px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
   }
+
+  .item {
+    position: absolute;
+    width: 270px;
+    height: 350px;
+    background-color: #16213e;
+    border: 2px solid #e94560;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+  }
+
+  .button-nav {
+    text-align: center;
+    margin-top: 5%;
+  }
+  .carousel-container-commands{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 10%;
+  }
+  .video-testimonio {
+    margin-top: 10%;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    justify-content: center;
+}
+
+.video-testimonio video {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
   /* ========================= Agradecimientos ========================= */
   .agradecimientos{
     width: 100%;

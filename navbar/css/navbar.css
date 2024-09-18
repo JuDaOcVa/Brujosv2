@@ -21,11 +21,14 @@
     align-items: center;
     padding: 10px 20px;
     width: 100%;
+    flex-wrap: nowrap;
   }
   .navbar-logo {
+    margin-top: 4%;
     font-size: 1.5rem;
     font-weight: bold;
     color: whitesmoke;
+    justify-self: center
   }
   .navbar-menu {
     display: flex;
@@ -87,12 +90,18 @@
     display: block;
   }
   .navbar-toggle {
+    margin-left: auto;
     display: none;
+    order:1;
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    margin-left: auto; /* Empuja el botón de toggle a la derecha */
+    align-self: center; 
   }
+
+
   @media screen and (max-width: 768px) {
     .navbar {
       border-radius: 0;
@@ -101,25 +110,39 @@
       width: 100%;
       transform: none;
     }
+    .navbar-menu{
+      background-color: white;
+      border-radius: 15px;
+    }
     .navbar-container {
       flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between; 
+      align-items: start;/* Mantiene el título y el botón de toggle separados */
     }
     .navbar-menu {
       display: none;
       flex-direction: column;
-      width: 100%;
-      padding: 10px 0;
+      padding: 10px;
+      margin-top: 5%;
     }
     .navbar-menu.active {
       display: flex;
+      flex-direction: column;
+      width: 100%;
     }
     .navbar-item {
-      margin: 10px 0;
+      margin: 10px 20px;
+    }
+    .navbar-item a{
+      color: black;
     }
     .navbar-toggle {
       display: block;
       order: 1;
-    }
+      color: white;
+      margin-left: auto;
+      }
     .navbar-logo {
       order: 0;
     }
